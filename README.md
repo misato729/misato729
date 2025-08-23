@@ -51,7 +51,7 @@
 
 <!-- metrics 置き場（GitHub Actionsで自動更新予定） -->
 <p align="center">
-  <img src="metrics.svg" alt="GitHub metrics" width="90%">
+  <img src="metrics.svg" alt="GitHub metrics" width="70%">
 </p>
 
 
