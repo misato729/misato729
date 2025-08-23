@@ -1,71 +1,44 @@
 name: Generate metrics
-
 on:
   schedule:
-    - cron: "23 3 * * 1"   # 毎週月曜 12:23 JST 頃
-  workflow_dispatch:        # 手動実行用
+    - cron: "23 3 * * 1"
+  workflow_dispatch:
 
 permissions:
-  contents: write           # SVGをコミットするために必須
+  contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 5      # 無限ハング防止
-
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
 
-      - name: Generate metrics
+      - name: Generate metrics (simple clean)
         uses: lowlighter/metrics@latest
         with:
-          token: ${{ secrets.METRICS_TOKEN }}   # repo + read:user 権限のPAT
+          token: ${{ secrets.METRICS_TOKEN }}
           user: misato729
-          filename: metrics.svg                 # 出力ファイル名を明示
+          filename: metrics.svg
           template: classic
-          base: header, activity, community, repositories, metadata
+          # ベース情報は最低限
+          base: header, repositories, metadata
           config_timezone: Asia/Tokyo
 
-          # 言語
+          # 言語だけ（棒グラフ）
           plugin_languages: yes
           plugin_languages_ignored: html, css
           plugin_languages_details: bytes-size, percentage
-          plugin_languages_limit: 8
+          plugin_languages_limit: 6
 
-          # 草（1年分）
-          plugin_isocalendar: yes
-          plugin_isocalendar_duration: full-year
-
-          # カレンダー
-          plugin_calendar: yes
-          plugin_calendar_limit: 3
-
-          # 活動時間
-          plugin_habits: yes
-          plugin_habits_from: 200
-          plugin_habits_facts: yes
-          plugin_habits_charts: yes
-
-          # 実績（Projects Classic のエラー回避のため一旦OFF）
+          # ノイズ源になりやすいものは切る
           plugin_achievements: no
-
-      - name: Place SVG at repo root
-        run: |
-          set -euo pipefail
-          if [ -f metrics.svg ]; then
-            echo "metrics.svg already at repo root. Skip copying."
-          elif [ -f metrics_renders/metrics.svg ]; then
-            cp -f metrics_renders/metrics.svg metrics.svg
-            echo "Copied from metrics_renders/metrics.svg"
-          elif [ -f github-metrics.svg ]; then
-            cp -f github-metrics.svg metrics.svg
-            echo "Copied from github-metrics.svg"
-          else
-            echo "No metrics.svg found to copy."
-          fi
+          plugin_habits: no
+          plugin_calendar: no
+          plugin_isocalendar: no
 
       - name: Commit metrics.svg
         uses: EndBug/add-and-commit@v9
         with:
           add: metrics.svg
-          message: "chore: update metrics"
+          message: "chore: update metrics (simple clean)"
