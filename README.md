@@ -12,6 +12,7 @@
   <img alt="Next.js" src="https://img.shields.io/badge/Next.js-000000.svg?logo=nextdotjs&logoColor=white">
   <img alt="PHP" src="https://img.shields.io/badge/PHP-777BB4.svg?logo=php&logoColor=white">
   <img alt="Laravel" src="https://img.shields.io/badge/Laravel-FF2D20.svg?logo=laravel&logoColor=white">
+  <img alt="Python" src="https://img.shields.io/badge/-Python-F9DC3E.svg?logo=python&style=flat">
   <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-4169E1.svg?logo=postgresql&logoColor=white">
   <img alt="WordPress" src="https://img.shields.io/badge/WordPress-21759B.svg?logo=wordpress&logoColor=white">
 </p>
@@ -26,7 +27,7 @@
   [Frontend](https://github.com/misato729/score-manager-frontend) ｜ [Backend](https://github.com/misato729/score-manager-backend)
 
 - **[Markdown対応メモアプリ](https://github.com/misato729/Next-MemoApp)**  
-  📝 Next.js + TypeScript ｜ Markdownプレビュー対応
+  📝 Next.js + TypeScript ｜ Markdownプレビュー対応  
   [本番サイト](https://next-memo-app-five.vercel.app/)
 
 - **[Portfolio Site](https://github.com/misato729/Yoshiki-Portfolio)**  
@@ -41,8 +42,8 @@
 ---
 
 ## 🚀 Now / Next
-- Now: Vue 3（Vite）× Laravel 12（Livewire併用）での開発強化  
-- Next: Nuxt への移行検証、React/Next.js の深掘り、Render/Vercel 運用最適化
+- Now: Vue 3（Vite）× Laravel 12での開発強化  
+- Next: Nuxt への移行、React/Next.js の深掘り
 
 ---
 
