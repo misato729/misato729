@@ -1,7 +1,6 @@
-<h1 align="center">Hi, I'm Yoshiki 👋</h1>
+<h1 align="center">Hi, I'm Ohno Yoshiki 👋</h1>
 <p align="center">
-  Frontend-leaning Full-stack ｜ Tokyo, JP  
-  Vue / React / Next.js × Laravel / PHP / WordPress
+  Frontend-leaning Full-stack ｜ Saitama, JP
 </p>
 
 <!-- 技術バッジ -->
@@ -11,11 +10,9 @@
   <img alt="Pinia" src="https://img.shields.io/badge/Pinia-FFD859.svg?logo=vue.js&logoColor=3eaf7c">
   <img alt="React" src="https://img.shields.io/badge/React-61DAFB.svg?logo=react&logoColor=000">
   <img alt="Next.js" src="https://img.shields.io/badge/Next.js-000000.svg?logo=nextdotjs&logoColor=white">
-  <img alt="Laravel" src="https://img.shields.io/badge/Laravel-FF2D20.svg?logo=laravel&logoColor=white">
   <img alt="PHP" src="https://img.shields.io/badge/PHP-777BB4.svg?logo=php&logoColor=white">
-  <img alt="MySQL" src="https://img.shields.io/badge/MySQL-4479A1.svg?logo=mysql&logoColor=white">
+  <img alt="Laravel" src="https://img.shields.io/badge/Laravel-FF2D20.svg?logo=laravel&logoColor=white">
   <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-4169E1.svg?logo=postgresql&logoColor=white">
-  <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind-06B6D4.svg?logo=tailwindcss&logoColor=white">
   <img alt="WordPress" src="https://img.shields.io/badge/WordPress-21759B.svg?logo=wordpress&logoColor=white">
 </p>
 
@@ -23,17 +20,17 @@
 
 ## 🧩 Featured Projects
 - **[REFLEC BEAT plus Lv11 Rank Manager](https://github.com/misato729/rbplus-rank-manager)**  
-  🎮 Vue 3 + TS + Pinia × Laravel 12 + Sanctum  
+  🎮 Vue 3 + TS + Pinia × Laravel 12 + Sanctum 
   難易度表＆スコア管理（126曲対応） / 認証・目標進捗・FCハイライト・CSV連携  
   [本番サイト](https://rbplus-rank-manager.site/) ｜  
   [Frontend](https://github.com/misato729/score-manager-frontend) ｜ [Backend](https://github.com/misato729/score-manager-backend)
 
 - **[Markdown対応メモアプリ](https://github.com/misato729/Next-MemoApp)**  
-  📝 Next.js + TypeScript ｜ Markdownプレビュー・検索・デバウンス対応  
+  📝 Next.js + TypeScript ｜ Markdownプレビュー対応
   [本番サイト](https://next-memo-app-five.vercel.app/)
 
 - **[Portfolio Site](https://github.com/misato729/Yoshiki-Portfolio)**  
-  🌐 WordPress オリジナルテーマ開発（受託想定構成）  
+  🌐 WordPress オリジナルテーマ開発  
   [本番サイト](https://yoshiki-portfolio.com/)
 
 ---
@@ -61,9 +58,9 @@
   <summary>🛠 Tech Stack（詳細）</summary>
 
 **Frontend**: Vue 3, Pinia, Vue Router, Vite, TypeScript, React, Next.js, Tailwind  
-**Backend**: Laravel 12, PHP, REST API, Livewire, Sanctum  
-**DB**: SQLite / MySQL / PostgreSQL  
-**Ops**: Vercel, Render, Cloudflare, GitHub Actions  
+**Backend**: Laravel 12, PHP, REST API, Sanctum  
+**DB**: SQLite / PostgreSQL  
+**Ops**: Vercel, Render, GitHub Actions  
 **Other**: Figma, WordPress（テーマ開発）, Streamlit(Python)
 </details>
 
@@ -72,5 +69,4 @@
 
 - Portfolio: [https://yoshiki-portfolio.com](https://yoshiki-portfolio.com)  
 - Qiita: [@misato729](https://qiita.com/misato729)  
-- GitHub: [@misato729](https://github.com/misato729)
 </details>
