@@ -15,7 +15,8 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    # Metrics v3.34 bundles an older Puppeteer/Chrome stack that hangs on Ubuntu 24.04.
+    runs-on: ubuntu-22.04
     timeout-minutes: 10
     steps:
       - name: Generate metrics
