@@ -35,17 +35,6 @@
 
 ---
 
-## Writing
-- [【応用情報】IT未経験の文系大学生が半年で応用情報を取った戦略と勉強法](https://qiita.com/misato729/items/0c77641c884b253e4d36) (Qiita)
-
----
-
-## Now / Next
-- Now: Vue, Laravelの深掘り
-- Next: バックエンド言語の学習
-
----
-
 <!-- metrics 置き場（GitHub Actionsで自動更新予定） -->
 <p align="center">
   <img src="metrics.svg" alt="GitHub metrics" width="70%">
