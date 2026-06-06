@@ -19,19 +19,19 @@
 ---
 
 ## Featured Projects
-- **[REFLEC BEAT plus Lv11 Rank Manager](https://github.com/misato729/rbplus-rank-manager)**  
-  Vue 3 + TS × Laravel 12 × PostgreSQL  
-  難易度表＆クリアランク管理（126曲対応） / 認証・プログレスバー・FCハイライト・設置店舗マップ・店舗チェックイン  
-  [本番サイト](https://rbplus-rank-manager.site/) ｜  
-  [フロントエンドリポジトリ](https://github.com/misato729/score-manager-frontend) ｜ [バックエンドリポジトリ](https://github.com/misato729/score-manager-backend)
+- **[REFLEC BEAT plus レベル11 難易度表＆クリアランク管理サイト](https://github.com/misato729/rbplus-rank-manager)**  
+  → **[フロントエンドリポジトリ](https://github.com/misato729/score-manager-frontend)** ｜ **[バックエンドリポジトリ](https://github.com/misato729/score-manager-backend)**  
+  Vue.js + TypeScript × Laravel × PostgreSQL  
+  難易度表 / クリアランク・フルコンボ状況管理 / 認証 / 目標設定 / プログレスバー / 設置店舗マップ / 店舗チェックイン  
+  サイトリンクは[こちら](https://rbplus-rank-manager.site/)  
 
 - **[Markdown対応メモアプリ](https://github.com/misato729/Next-MemoApp)**  
   Next.js + TypeScript ｜ Markdownプレビュー対応  
-  [本番サイト](https://next-memo-app-five.vercel.app/)
+  サイトリンクは[こちら](https://next-memo-app-five.vercel.app/)
 
 - **[Portfolio Site](https://github.com/misato729/Yoshiki-Portfolio)**  
   WordPress オリジナルテーマ開発  
-  [本番サイト](https://yoshiki-portfolio.com/)
+  サイトリンクは[こちら](https://yoshiki-portfolio.com/)
 
 ---
 
@@ -53,20 +53,10 @@
 
 
 ---
+## Qualification
 
-<details>
-  <summary> Tech Stack（詳細）</summary>
-
-**Frontend**: HTML, CSS, JavaScript, TypeScript, Vue.js, React, Next.js  
-**Backend**: PHP, Laravel  
-**DB**: SQLite / PostgreSQL  
-**Ops**: Vercel, Render, GitHub Actions  
-**Other**: Figma, WordPress（テーマ開発）, Streamlit(Python)
-</details>
-
-<details>
-  <summary>Links</summary>
-
-- Portfolio: [https://yoshiki-portfolio.com](https://yoshiki-portfolio.com)  
-- Qiita: [@misato729](https://qiita.com/misato729)  
-</details>
+* 2022/3　TOEIC Listening & Reading Test 790
+* 2022/11　基本情報技術者試験　合格	
+* 2022/12　応用情報技術者試験　合格
+* 2026/4　AWS Certified Solutions Architect – Associate
+* 2026/4　AWS Certified Developer - Associate
