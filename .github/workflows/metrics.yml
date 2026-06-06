@@ -16,10 +16,10 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 10
     steps:
       - name: Generate metrics
-        uses: lowlighter/metrics@latest
+        uses: lowlighter/metrics@14179f2d8857c4a011fb3572b18bf524c68b5b1a # v3.34
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           user: misato729
