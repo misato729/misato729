@@ -2,7 +2,6 @@ name: Generate metrics
 
 on:
   schedule:
-    # Changing the cron expression reactivates schedules disabled after inactivity.
     - cron: "17 3 * * 1"
   workflow_dispatch:
 
@@ -15,30 +14,40 @@ concurrency:
 
 jobs:
   build:
-    # Metrics v3.34 bundles an older Puppeteer/Chrome stack that hangs on Ubuntu 24.04.
-    runs-on: ubuntu-22.04
-    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
     steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
       - name: Generate metrics
-        uses: lowlighter/metrics@14179f2d8857c4a011fb3572b18bf524c68b5b1a # v3.34
-        with:
-          token: ${{ secrets.METRICS_TOKEN }}
-          user: misato729
-          filename: metrics.svg
-          committer_message: "chore: update metrics [skip ci]"
-          template: classic
-          # ベース情報は最低限
-          base: header, repositories, metadata
-          config_timezone: Asia/Tokyo
+        shell: bash
+        run: |
+          set -euo pipefail
 
-          # 言語だけ（棒グラフ）
-          plugin_languages: yes
-          plugin_languages_ignored: html, css
-          plugin_languages_details: bytes-size, percentage
-          plugin_languages_limit: 6
+          url="https://github-readme-stats.vercel.app/api/top-langs/?username=misato729&layout=compact&langs_count=6&hide=html,css&locale=ja&hide_border=true&custom_title=Languages"
+          curl --fail --location --retry 3 --retry-all-errors \
+            --connect-timeout 15 --max-time 60 \
+            "$url" --output metrics.svg
 
-          # ノイズ源になりやすいものは切る
-          plugin_achievements: no
-          plugin_habits: no
-          plugin_calendar: no
-          plugin_isocalendar: no
+          grep -q '<svg' metrics.svg
+          if grep -q 'Something went wrong' metrics.svg; then
+            echo "Metrics service returned an error card."
+            exit 1
+          fi
+
+      - name: Commit metrics
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if git diff --quiet -- metrics.svg; then
+            echo "metrics.svg is already up to date."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add metrics.svg
+          git commit -m "chore: update metrics [skip ci]"
+          git push
