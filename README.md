@@ -41,8 +41,8 @@
 ---
 
 ## Now / Next
-- Now: Vue 3（Vite）× Laravel 12での開発強化
-- Next: Nuxt への移行、React/Next.js の深掘り
+- Now: Vue, Laravelの深掘り
+- Next: バックエンド言語の学習
 
 ---
 
