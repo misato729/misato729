@@ -18,23 +18,100 @@ jobs:
     timeout-minutes: 3
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Generate metrics
-        shell: bash
-        run: |
-          set -euo pipefail
+        uses: actions/github-script@v9
+        with:
+          github-token: ${{ secrets.METRICS_TOKEN }}
+          script: |
+            const fs = require("fs");
+            const owner = "misato729";
+            const ignored = new Set(["HTML", "CSS"]);
+            const colors = {
+              TypeScript: "#3178c6",
+              JavaScript: "#f1e05a",
+              PHP: "#4f5d95",
+              Vue: "#41b883",
+              Python: "#3572a5",
+              Blade: "#f7523f",
+              SCSS: "#c6538c",
+              Shell: "#89e051",
+              Dockerfile: "#384d54",
+            };
 
-          url="https://github-readme-stats.vercel.app/api/top-langs/?username=misato729&layout=compact&langs_count=6&hide=html,css&locale=ja&hide_border=true&custom_title=Languages"
-          curl --fail --location --retry 3 --retry-all-errors \
-            --connect-timeout 15 --max-time 60 \
-            "$url" --output metrics.svg
+            const repos = await github.paginate(
+              github.rest.repos.listForAuthenticatedUser,
+              { affiliation: "owner", per_page: 100 },
+            );
 
-          grep -q '<svg' metrics.svg
-          if grep -q 'Something went wrong' metrics.svg; then
-            echo "Metrics service returned an error card."
-            exit 1
-          fi
+            const totals = new Map();
+            for (const repo of repos) {
+              if (repo.owner.login !== owner || repo.fork || repo.archived) continue;
+
+              const { data: languages } = await github.rest.repos.listLanguages({
+                owner,
+                repo: repo.name,
+              });
+
+              for (const [language, bytes] of Object.entries(languages)) {
+                if (ignored.has(language)) continue;
+                totals.set(language, (totals.get(language) || 0) + bytes);
+              }
+            }
+
+            const allBytes = [...totals.values()].reduce((sum, bytes) => sum + bytes, 0);
+            if (!allBytes) throw new Error("No language data was returned by GitHub.");
+
+            const languages = [...totals.entries()]
+              .sort((a, b) => b[1] - a[1])
+              .slice(0, 6)
+              .map(([name, bytes]) => ({
+                name,
+                bytes,
+                percentage: (bytes / allBytes) * 100,
+              }));
+
+            const escapeXml = (value) => String(value)
+              .replaceAll("&", "&amp;")
+              .replaceAll("<", "&lt;")
+              .replaceAll(">", "&gt;")
+              .replaceAll('"', "&quot;");
+
+            const rows = languages.map((language, index) => {
+              const y = 82 + index * 36;
+              const width = Math.max(3, language.percentage * 3.5);
+              const color = colors[language.name] || "#6e7781";
+              return `
+                <text class="label" x="24" y="${y}">${escapeXml(language.name)}</text>
+                <rect class="track" x="170" y="${y - 13}" width="350" height="12" rx="6"/>
+                <rect x="170" y="${y - 13}" width="${width.toFixed(1)}" height="12" rx="6" fill="${color}"/>
+                <text class="value" x="610" y="${y}" text-anchor="end">${language.percentage.toFixed(1)}%</text>`;
+            }).join("");
+
+            const height = 105 + languages.length * 36;
+            const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="640" height="${height}" viewBox="0 0 640 ${height}" role="img" aria-labelledby="title desc">
+              <title id="title">Most used languages</title>
+              <desc id="desc">Language usage across repositories owned by ${owner}, excluding HTML and CSS.</desc>
+              <style>
+                text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+                .title { fill: #24292f; font-size: 20px; font-weight: 600; }
+                .subtitle, .value { fill: #57606a; font-size: 13px; }
+                .label { fill: #24292f; font-size: 14px; font-weight: 500; }
+                .track { fill: #d8dee4; }
+                @media (prefers-color-scheme: dark) {
+                  .title, .label { fill: #f0f6fc; }
+                  .subtitle, .value { fill: #8c959f; }
+                  .track { fill: #30363d; }
+                }
+              </style>
+              <text id="title" class="title" x="24" y="32">Most used languages</text>
+              <text class="subtitle" x="24" y="54">Owned repositories, excluding HTML and CSS</text>
+              ${rows}
+            </svg>`;
+
+            fs.writeFileSync("metrics.svg", svg);
+            core.info(`Generated metrics.svg from ${repos.length} repositories.`);
 
       - name: Commit metrics
         shell: bash
