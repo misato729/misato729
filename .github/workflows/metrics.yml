@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: "17 3 * * 1"
   workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/metrics.yml"
 
 permissions:
   contents: write
@@ -23,7 +26,7 @@ jobs:
       - name: Generate metrics
         uses: actions/github-script@v9
         with:
-          github-token: ${{ secrets.METRICS_TOKEN }}
+          github-token: ${{ github.token }}
           script: |
             const fs = require("fs");
             const owner = "misato729";
@@ -41,13 +44,13 @@ jobs:
             };
 
             const repos = await github.paginate(
-              github.rest.repos.listForAuthenticatedUser,
-              { affiliation: "owner", per_page: 100 },
+              github.rest.repos.listForUser,
+              { username: owner, type: "owner", per_page: 100 },
             );
 
             const totals = new Map();
             for (const repo of repos) {
-              if (repo.owner.login !== owner || repo.fork || repo.archived) continue;
+              if (repo.fork || repo.archived) continue;
 
               const { data: languages } = await github.rest.repos.listLanguages({
                 owner,
@@ -68,7 +71,6 @@ jobs:
               .slice(0, 6)
               .map(([name, bytes]) => ({
                 name,
-                bytes,
                 percentage: (bytes / allBytes) * 100,
               }));
 
@@ -111,7 +113,7 @@ jobs:
             </svg>`;
 
             fs.writeFileSync("metrics.svg", svg);
-            core.info(`Generated metrics.svg from ${repos.length} repositories.`);
+            core.info(`Generated metrics.svg from ${repos.length} public repositories.`);
 
       - name: Commit metrics
         shell: bash
