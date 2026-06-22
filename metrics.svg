@@ -19,7 +19,7 @@
     <text class="label" x="24" y="82">PHP</text>
     <rect class="track" x="170" y="69" width="350" height="12" rx="6"/>
     <rect x="170" y="69" width="121.6" height="12" rx="6" fill="#4f5d95"/>
-    <text class="value" x="610" y="82" text-anchor="end">34.8%</text>
+    <text class="value" x="610" y="82" text-anchor="end">34.7%</text>
     <text class="label" x="24" y="118">Vue</text>
     <rect class="track" x="170" y="105" width="350" height="12" rx="6"/>
     <rect x="170" y="105" width="92.7" height="12" rx="6" fill="#41b883"/>
