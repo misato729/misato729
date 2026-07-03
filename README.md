@@ -6,12 +6,13 @@
 <!-- 技術バッジ -->
 <p align="center">
   <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6.svg?logo=typescript&logoColor=white">
-  <img alt="Vue" src="https://img.shields.io/badge/Vue%203-42B883.svg?logo=vuedotjs&logoColor=white">
-  <img alt="React" src="https://img.shields.io/badge/React-61DAFB.svg?logo=react&logoColor=000">
-  <img alt="Next.js" src="https://img.shields.io/badge/Next.js-000000.svg?logo=nextdotjs&logoColor=white">
+  <img alt="Vue" src="https://img.shields.io/badge/Vue-42B883.svg?logo=vuedotjs&logoColor=white">
+  <img alt="Nuxt" src="https://img.shields.io/badge/Nuxt-00DC82.svg?logo=nuxt&logoColor=white">
   <img alt="PHP" src="https://img.shields.io/badge/PHP-777BB4.svg?logo=php&logoColor=white">
   <img alt="Laravel" src="https://img.shields.io/badge/Laravel-FF2D20.svg?logo=laravel&logoColor=white">
-  <img alt="Python" src="https://img.shields.io/badge/-Python-F9DC3E.svg?logo=python&style=flat">
+  <img alt="Ruby" src="https://img.shields.io/badge/Ruby-CC342D.svg?logo=ruby&logoColor=white">
+  <img alt="Ruby on Rails" src="https://img.shields.io/badge/Rails-D30001.svg?logo=rubyonrails&logoColor=white">
+  <img alt="Python" src="https://img.shields.io/badge/Python-F9DC3E.svg?logo=python&style=flat">
   <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-4169E1.svg?logo=postgresql&logoColor=white">
   <img alt="WordPress" src="https://img.shields.io/badge/WordPress-21759B.svg?logo=wordpress&logoColor=white">
 </p>
