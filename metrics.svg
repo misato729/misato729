@@ -18,19 +18,19 @@
   
     <text class="label" x="24" y="82">Ruby</text>
     <rect class="track" x="170" y="69" width="350" height="12" rx="6"/>
-    <rect x="170" y="69" width="194.2" height="12" rx="6" fill="#6e7781"/>
-    <text class="value" x="610" y="82" text-anchor="end">55.5%</text>
+    <rect x="170" y="69" width="194.0" height="12" rx="6" fill="#6e7781"/>
+    <text class="value" x="610" y="82" text-anchor="end">55.4%</text>
     <text class="label" x="24" y="118">Vue</text>
     <rect class="track" x="170" y="105" width="350" height="12" rx="6"/>
-    <rect x="170" y="105" width="79.2" height="12" rx="6" fill="#41b883"/>
-    <text class="value" x="610" y="118" text-anchor="end">22.6%</text>
+    <rect x="170" y="105" width="79.3" height="12" rx="6" fill="#41b883"/>
+    <text class="value" x="610" y="118" text-anchor="end">22.7%</text>
     <text class="label" x="24" y="154">PHP</text>
     <rect class="track" x="170" y="141" width="350" height="12" rx="6"/>
     <rect x="170" y="141" width="37.9" height="12" rx="6" fill="#4f5d95"/>
     <text class="value" x="610" y="154" text-anchor="end">10.8%</text>
     <text class="label" x="24" y="190">TypeScript</text>
     <rect class="track" x="170" y="177" width="350" height="12" rx="6"/>
-    <rect x="170" y="177" width="23.3" height="12" rx="6" fill="#3178c6"/>
+    <rect x="170" y="177" width="23.4" height="12" rx="6" fill="#3178c6"/>
     <text class="value" x="610" y="190" text-anchor="end">6.7%</text>
     <text class="label" x="24" y="226">Blade</text>
     <rect class="track" x="170" y="213" width="350" height="12" rx="6"/>
