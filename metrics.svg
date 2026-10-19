@@ -18,26 +18,26 @@
   
     <text class="label" x="24" y="82">Ruby</text>
     <rect class="track" x="170" y="69" width="350" height="12" rx="6"/>
-    <rect x="170" y="69" width="268.8" height="12" rx="6" fill="#6e7781"/>
-    <text class="value" x="610" y="82" text-anchor="end">76.8%</text>
+    <rect x="170" y="69" width="308.0" height="12" rx="6" fill="#6e7781"/>
+    <text class="value" x="610" y="82" text-anchor="end">88.0%</text>
     <text class="label" x="24" y="118">Vue</text>
     <rect class="track" x="170" y="105" width="350" height="12" rx="6"/>
-    <rect x="170" y="105" width="43.7" height="12" rx="6" fill="#41b883"/>
-    <text class="value" x="610" y="118" text-anchor="end">12.5%</text>
+    <rect x="170" y="105" width="22.2" height="12" rx="6" fill="#41b883"/>
+    <text class="value" x="610" y="118" text-anchor="end">6.3%</text>
     <text class="label" x="24" y="154">PHP</text>
     <rect class="track" x="170" y="141" width="350" height="12" rx="6"/>
-    <rect x="170" y="141" width="17.4" height="12" rx="6" fill="#4f5d95"/>
-    <text class="value" x="610" y="154" text-anchor="end">5.0%</text>
+    <rect x="170" y="141" width="8.8" height="12" rx="6" fill="#4f5d95"/>
+    <text class="value" x="610" y="154" text-anchor="end">2.5%</text>
     <text class="label" x="24" y="190">TypeScript</text>
     <rect class="track" x="170" y="177" width="350" height="12" rx="6"/>
-    <rect x="170" y="177" width="12.7" height="12" rx="6" fill="#3178c6"/>
-    <text class="value" x="610" y="190" text-anchor="end">3.6%</text>
+    <rect x="170" y="177" width="7.2" height="12" rx="6" fill="#3178c6"/>
+    <text class="value" x="610" y="190" text-anchor="end">2.1%</text>
     <text class="label" x="24" y="226">Blade</text>
     <rect class="track" x="170" y="213" width="350" height="12" rx="6"/>
-    <rect x="170" y="213" width="5.0" height="12" rx="6" fill="#f7523f"/>
-    <text class="value" x="610" y="226" text-anchor="end">1.4%</text>
+    <rect x="170" y="213" width="3.0" height="12" rx="6" fill="#f7523f"/>
+    <text class="value" x="610" y="226" text-anchor="end">0.7%</text>
     <text class="label" x="24" y="262">JavaScript</text>
     <rect class="track" x="170" y="249" width="350" height="12" rx="6"/>
     <rect x="170" y="249" width="3.0" height="12" rx="6" fill="#f1e05a"/>
-    <text class="value" x="610" y="262" text-anchor="end">0.5%</text>
+    <text class="value" x="610" y="262" text-anchor="end">0.3%</text>
 </svg>
