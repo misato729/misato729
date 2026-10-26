@@ -18,26 +18,26 @@
   
     <text class="label" x="24" y="82">TypeScript</text>
     <rect class="track" x="170" y="69" width="350" height="12" rx="6"/>
-    <rect x="170" y="69" width="158.5" height="12" rx="6" fill="#3178c6"/>
-    <text class="value" x="610" y="82" text-anchor="end">45.3%</text>
+    <rect x="170" y="69" width="170.6" height="12" rx="6" fill="#3178c6"/>
+    <text class="value" x="610" y="82" text-anchor="end">48.7%</text>
     <text class="label" x="24" y="118">Vue</text>
     <rect class="track" x="170" y="105" width="350" height="12" rx="6"/>
-    <rect x="170" y="105" width="92.0" height="12" rx="6" fill="#41b883"/>
-    <text class="value" x="610" y="118" text-anchor="end">26.3%</text>
+    <rect x="170" y="105" width="89.2" height="12" rx="6" fill="#41b883"/>
+    <text class="value" x="610" y="118" text-anchor="end">25.5%</text>
     <text class="label" x="24" y="154">PHP</text>
     <rect class="track" x="170" y="141" width="350" height="12" rx="6"/>
-    <rect x="170" y="141" width="63.1" height="12" rx="6" fill="#4f5d95"/>
-    <text class="value" x="610" y="154" text-anchor="end">18.0%</text>
+    <rect x="170" y="141" width="57.2" height="12" rx="6" fill="#4f5d95"/>
+    <text class="value" x="610" y="154" text-anchor="end">16.3%</text>
     <text class="label" x="24" y="190">JavaScript</text>
     <rect class="track" x="170" y="177" width="350" height="12" rx="6"/>
-    <rect x="170" y="177" width="17.0" height="12" rx="6" fill="#f1e05a"/>
-    <text class="value" x="610" y="190" text-anchor="end">4.9%</text>
+    <rect x="170" y="177" width="15.4" height="12" rx="6" fill="#f1e05a"/>
+    <text class="value" x="610" y="190" text-anchor="end">4.4%</text>
     <text class="label" x="24" y="226">Blade</text>
     <rect class="track" x="170" y="213" width="350" height="12" rx="6"/>
-    <rect x="170" y="213" width="11.2" height="12" rx="6" fill="#f7523f"/>
-    <text class="value" x="610" y="226" text-anchor="end">3.2%</text>
+    <rect x="170" y="213" width="10.1" height="12" rx="6" fill="#f7523f"/>
+    <text class="value" x="610" y="226" text-anchor="end">2.9%</text>
     <text class="label" x="24" y="262">PLpgSQL</text>
     <rect class="track" x="170" y="249" width="350" height="12" rx="6"/>
-    <rect x="170" y="249" width="6.4" height="12" rx="6" fill="#6e7781"/>
-    <text class="value" x="610" y="262" text-anchor="end">1.8%</text>
+    <rect x="170" y="249" width="5.8" height="12" rx="6" fill="#6e7781"/>
+    <text class="value" x="610" y="262" text-anchor="end">1.7%</text>
 </svg>
