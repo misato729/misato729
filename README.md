@@ -5,6 +5,9 @@
 
 <!-- 技術バッジ -->
 <p align="center">
+  <img alt="HTML5" src="https://img.shields.io/badge/HTML5-E34F26.svg?logo=html5&logoColor=white">
+  <img alt="CSS3" src="https://img.shields.io/badge/CSS3-1572B6.svg?logo=css&logoColor=white">
+  <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?logo=javascript&logoColor=black">
   <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6.svg?logo=typescript&logoColor=white">
   <img alt="Vue" src="https://img.shields.io/badge/Vue.js-42B883.svg?logo=vuedotjs&logoColor=white">
   <img alt="Nuxt" src="https://img.shields.io/badge/Nuxt-00DC82.svg?logo=nuxt&logoColor=white">
@@ -14,7 +17,6 @@
   <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-4169E1.svg?logo=postgresql&logoColor=white">
   <img alt="WordPress" src="https://img.shields.io/badge/WordPress-21759B.svg?logo=wordpress&logoColor=white">
 </p>
-
 ---
 
 ## Featured Projects
