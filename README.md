@@ -10,8 +10,6 @@
   <img alt="Nuxt" src="https://img.shields.io/badge/Nuxt-00DC82.svg?logo=nuxt&logoColor=white">
   <img alt="PHP" src="https://img.shields.io/badge/PHP-777BB4.svg?logo=php&logoColor=white">
   <img alt="Laravel" src="https://img.shields.io/badge/Laravel-FF2D20.svg?logo=laravel&logoColor=white">
-  <img alt="Ruby" src="https://img.shields.io/badge/Ruby-CC342D.svg?logo=ruby&logoColor=white">
-  <img alt="Ruby on Rails" src="https://img.shields.io/badge/Ruby on Rails-D30001.svg?logo=rubyonrails&logoColor=white">
   <img alt="Python" src="https://img.shields.io/badge/Python-F9DC3E.svg?logo=python&style=flat">
   <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-4169E1.svg?logo=postgresql&logoColor=white">
   <img alt="WordPress" src="https://img.shields.io/badge/WordPress-21759B.svg?logo=wordpress&logoColor=white">
