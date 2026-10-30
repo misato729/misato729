@@ -17,7 +17,6 @@
   <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-4169E1.svg?logo=postgresql&logoColor=white">
   <img alt="WordPress" src="https://img.shields.io/badge/WordPress-21759B.svg?logo=wordpress&logoColor=white">
 </p>
----
 
 ## Featured Projects
 - **[REFLEC BEAT plus レベル11 難易度表＆クリアランク管理サイト](https://github.com/misato729/rbplus-rank-manager)**  
