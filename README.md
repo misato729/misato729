@@ -20,7 +20,6 @@
 
 ## Featured Projects
 - **[REFLEC BEAT plus レベル11 難易度表＆クリアランク管理サイト](https://github.com/misato729/rbplus-rank-manager)**  
-  → **[フロントエンドリポジトリ](https://github.com/misato729/score-manager-frontend)** ｜ **[バックエンドリポジトリ](https://github.com/misato729/score-manager-backend)**  
   Vue.js + TypeScript × Laravel × PostgreSQL  
   難易度表 / クリアランク・フルコンボ状況管理 / 認証 / 目標設定 / プログレスバー / 設置店舗マップ / 店舗チェックイン  
   サイトリンクは[こちら](https://rbplus-rank-manager.site/)  
